@@ -15,6 +15,10 @@ export function pickRandom(to_pick) {
   return undefined;
 }
 
+export function getRandomElement(a) {
+  return a[Math.floor(Math.random()*a.length)];
+}
+
 export function throwDice(dice) {
   // a dice should look like this:
   // {d: {type: 6, count: 2}, mod: 2}
