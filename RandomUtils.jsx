@@ -29,6 +29,12 @@ export function getRandomElement(a, seed) {
   return a[Math.floor(seed()*a.length)];
 }
 
+export function getRandomIntInclusive(min, max, seed) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(seed() * (max - min + 1)) + min;
+}
+
 export function throwDice(dice, seed) {
   // a dice should look like this:
   // {d: {type: 6, count: 2}, mod: 2}
